@@ -9,7 +9,7 @@ from citation_handler import CitationManager
 
 load_dotenv()
 
-FILE_NAME = "/Users/sokurolha/PycharmProjects/pythonProject2/data/algebra conv.docx"
+FILE_NAME = "your_file_name"
 DATA_DIR = "data"
 FILE_PATH = os.path.join(DATA_DIR, FILE_NAME)
 
