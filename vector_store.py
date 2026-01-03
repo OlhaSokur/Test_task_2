@@ -42,7 +42,7 @@ class VectorStoreManager:
 
     def create_index(self, documents: List[Document], force_reset: bool = False) -> None:
         if not documents:
-            print("Увага: Отримано порожній список документів. Індексацію пропущено.")
+            print("Отримано порожній список документів. Індексацію пропущено.")
             return
 
         if force_reset and os.path.exists(self.persist_directory):
@@ -54,7 +54,6 @@ class VectorStoreManager:
 
         print(f"Початок індексації {len(documents)} чанків у колекцію '{self.collection_name}'...")
 
-        # Створення бази з явною метрикою 'cosine'
         self.vector_db = Chroma.from_documents(
             documents=documents,
             embedding=self.embedding_model,
