@@ -57,12 +57,12 @@ class UniversalDocumentProcessor:
 
         try:
             if ext == '.pdf':
-                print("Виявлено формат PDF (PyPDFLoader)")
+                print("Формат PDF (PyPDFLoader)")
                 loader = PyPDFLoader(self.file_path)
                 raw_documents = loader.load()
 
             elif ext in ['.docx', '.doc']:
-                print("Виявлено формат DOCX")
+                print("Формат DOCX")
                 loader = UnstructuredWordDocumentLoader(
                     self.file_path,
                     mode="elements",
