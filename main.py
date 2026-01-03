@@ -1,3 +1,8 @@
+"""
+Important note: Please replace the value of the 'your_file_name' variable below 
+with the exact name of your document (e.g., 'algebra.pdf') located in the 'data' directory 
+before running the script.
+"""
 import os
 import sys
 from dotenv import load_dotenv
@@ -22,7 +27,7 @@ def main():
 
     if not os.getenv("OPENAI_API_KEY"):
         print("Помилка: Не знайдено OPENAI_API_KEY.")
-        print(" Створіть файл .env і додайте туди: OPENAI_API_KEY=sk-...")
+        print("Створіть файл .env і додайте туди: OPENAI_API_KEY=sk-...")
         return
 
     print(f"Підключення до бази знань '{COLLECTION_NAME}'...")
@@ -76,7 +81,7 @@ def main():
                 continue
 
             if query.lower() in ['exit', 'quit', 'вихід']:
-                print("До побачення!")
+                print("До побачення")
                 break
 
             result = rag_engine.get_answer(query)
