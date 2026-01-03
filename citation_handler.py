@@ -12,7 +12,7 @@ class CitationManager:
 
     @staticmethod
     def _parse_citation_string(citation_string: str) -> Tuple[str, Optional[str]]:
-        # Шукаємо: (Будь-що), (коми/пробіли), (Слово Стор/Page/стор крапка/без), (пробіли), (Будь-що до кінця)
+        # Шукаємо будь-що, коми/пробіли, слово Стор/Page/стор крапка/без, пробіли, Будь-що до кінця
         match = re.search(
             r'(.*),\s*(?:Стор\.?|Page|стор\.?)\s*(.*)',
             citation_string,
